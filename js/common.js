@@ -21,7 +21,8 @@
         $('#kimBox').load(url)
     })
 
-    $('.h1Nav > h1 > a').on('click', function(){
+    $('.h1Nav > h1 > a').on('click', function(e){
+        e.preventDefault()
         var url = $(this).attr('href')
         $('#kimContainer').remove()
         $('main.html').load(url)
